@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Form</title>
+</head>
+
+<body>
+     <form action="#" onsubmit="return validation()">
+          Username: <br>
+          <input type="text" name="" value="" id="user" >
+          <span id="username" style="color: red;"></span><br>
+          Password: <br>
+          <input type="password" name="password" value="" id="pass">
+          <span id="password" style="color: red;"></span><br>
+          <button type="submit">Submit</button>
+     </form>
+
+     <script>
+          function validation() {
+               var user = document.getElementById('user').value;
+               var pass = document.getElementById('pass').value;
+
+               if (user == "") {
+                    document.getElementById('username').innerHTML = "** Please fill the user name field";
+                    return false;
+               }
+               if ((user.length <= 2) || (user.length > 20)) {
+                    document.getElementById('username').innerHTML = " ** Username lenght must be between 2 and 20";
+                    return false;
+               }
+               if(!isNaN(user)){
+                    document.getElementById('username').innerHTML = " ** Username must be charater";
+                    return false;
+                    
+               }
+               if (pass == "") {
+                    document.getElementById('password').innerHTML = "** Please fill the user password field";
+                    return false;
+               }
+          }
+     </script>
+</body>
+
+</html>

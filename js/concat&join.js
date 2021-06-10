@@ -1,0 +1,8 @@
+var a =["vikas","mohit","rohit"];
+var b = ["ram","raj"];
+
+var c = a.concat(b);
+document.write(c + "<br><br>")
+var d = c.join("/")
+
+document.write(d);
